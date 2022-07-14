@@ -185,21 +185,32 @@ body {
     }
 
     .chooser {
-        width: 200px;
-        height: 190px;
+        width: 172px;
+        height: 180px;
         border-radius: 10px;
         /* color: #FFFFFF;*/
-        filter: drop-shadow(0 0 0.75rem);
-        Offset: 0, 0(rgba(0, 0, 0, 0.25));
+        filter: drop-shadow(0 0 0.25rem white);
+        Offset: 0, 0(rgba(209, 203, 203, 0));
         margin-left: 5%;
         /*cima direita baixo esquerda*/
         background-color: #FFFFFF;
+        fill: solid;
+    }
+   /*bordergreen*/
+    .chooser {
+        fill: solid;
+        color: #FFFFFF;
+        color: #32B72F;
+        filter: drop-shadow(0 0 0.25rem green);
+        border-radius: 10px;
+        Offset: 0, 0 rgba(254, 255, 254, 0.973);
+        box-shadow: 1px 1px 15px -6px, inset 0 0 0 5px #32B72F;
     }
 
     .image {
         margin: 1.5vw 2.5vw;
-        width: 32vw;
-        height: 20vw;
+        width: 30vw;
+        height: 18vw;
         border-radius: 2vw;
         object-fit: cover;
     }
@@ -207,33 +218,52 @@ body {
     .chooser :nth-child(2) {
         font-family: 'Roboto';
         font-weight: bold;
-        font-size: 19px;
-        line-height: 100%;
+        font-size: 16px;
+        line-height: 19px;
         color: #333333;
+        align-self: flex-start;
+        vertical-align: top;
         margin-left: 5%;
     }
 
     .chooser :nth-child(3) {
         font-family: 'Roboto';
         font-style: light;
-        font-size: 15px;
+        font-size: 12px;
         letter-spacing: 1.8%;
         line-height: 18px;
-        Line-height: 100%;
         color: #A6A6A6;
+        align-self: flex-start;
+        vertical-align: top;
         margin-left: 5%;
         margin-top: 5%;
     }
 
     .chooser :nth-child(4) {
         font-family: 'Roboto';
-        Font-style: Regular;
-        Font-size: 16px;
+        Font-style: normal;
+        Font-size: 14px;
         line-height: 19px;
-        line-height: 100%;
         color: #000000;
+        align-self: flex-start;
+        vertical-align: top;
         margin-left: 5%;
-        margin-top: 15%;
+        margin-top: 5%;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .icon-check {
+        width: 23px;
+        height: 15px;
+        border-radius: 50%;
+        margin-left: 80%;
+    }
+
+    .icon {
+        margin-left: 80%;
     }
 
     .drink {
