@@ -127,6 +127,10 @@ body {
         background-color: #E5E5E5;
     }
 
+    section {
+        margin-bottom: 30%;
+    }
+
     .title {
         position: fixed;
         z-index: 1;
@@ -161,6 +165,7 @@ body {
 
     nav {
         overflow-x: scroll;
+        scrollbar-width: none;
     }
 
     .meal {
@@ -189,19 +194,20 @@ body {
         height: 180px;
         border-radius: 10px;
         /* color: #FFFFFF;*/
-        filter: drop-shadow(0 0 0.25rem white);
-        Offset: 0, 0(rgba(209, 203, 203, 0));
+        box-shadow: #FFFFFF;
+        filter: drop-shadow(0 0 0.95 white);
+        Offset: 0, 0(rgba(209, 203, 203, 0.986));
         margin-left: 5%;
         /*cima direita baixo esquerda*/
         background-color: #FFFFFF;
         fill: solid;
     }
-   /*bordergreen*/
-    .chooser {
+
+    /*bordergreen*/
+    .borderGreen {
         fill: solid;
-        color: #FFFFFF;
         color: #32B72F;
-        filter: drop-shadow(0 0 0.25rem green);
+        filter: drop-shadow(0 0 0.45rem green);
         border-radius: 10px;
         Offset: 0, 0 rgba(254, 255, 254, 0.973);
         box-shadow: 1px 1px 15px -6px, inset 0 0 0 5px #32B72F;
@@ -271,7 +277,7 @@ body {
         left: 2%;
         margin-top: 10%;
         margin-left: 2%;
-        margin-bottom: 3%;
+        margin-bottom: 5%;
     }
 
     .drink h6 {
@@ -288,7 +294,7 @@ body {
         left: 2%;
         margin-top: 10%;
         margin-left: 2%;
-        margin-bottom: 3%;
+        margin-bottom: 5%;
     }
 
     .dessert h6 {
@@ -300,5 +306,44 @@ body {
         color: #333333;
     }
 
+    .baseboard {
+        width: 100%;
+        height: 20vw;
+        border-radius: 4px;
+        filter: drop-shadow(rgba(0, 0, 0, 0.25));
+        background-color: #ffffff;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .border {
+        width: 100vw;
+        height: 15vw;
+        background-color: #a6a6a6;
+        border-radius: 20px;
+        font-family: 'Roboto';
+        font-size: 6vw;
+        line-height: 20px;
+        vertical-align: top;
+        letter-spacing: 0.5vw;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .changeColor {
+        background: #32B72F;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 
 }
