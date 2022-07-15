@@ -30,8 +30,8 @@
                 <h6>First, choose your meal</h6>
             </div>
 
-            <div class="main-course">
-                <div class="chooser">
+            <div class="main-course foodChooser">
+                <div class="chooser" onclick="foodSelection(this)">
                     <img class="image" src="./assets/picanha.jpg">
                     <p><strong>Filet Steak</strong></p>
                     <p>Carne de qualidade</p>
@@ -39,7 +39,7 @@
                     <image class="icon-check hidden" src="./assets/checkmark.jpg">
                 </div>
 
-                <div class="chooser">
+                <div class="chooser" onclick="foodSelection(this)">
                     <img class="image" src="./assets/alcatra.jpg">
                     <p><strong>Rib Eye Steak</strong></p>
                     <p>Carne de qualidade</p>
@@ -47,7 +47,7 @@
                     <image class="icon-check hidden" src="./assets/checkmark.jpg">
                 </div>
 
-                <div class="chooser">
+                <div class="chooser" onclick="foodSelection(this)">
                     <img class="image" src="./assets/costelinha.jpg">
                     <p><strong>Rib</strong></p>
                     <p>Carne de qualidade</p>
@@ -55,13 +55,14 @@
                     <image class="icon-check hidden" src="./assets/checkmark.jpg">
                 </div>
 
-                <div class="chooser">
+                <div class="chooser" onclick="foodSelection(this)">
                     <img class="image" src="./assets//churrasco2.jpg">
                     <p><strong>Barbecue</strong></p>
                     <p>Carne de qualidade</p>
                     <p>$ 30.00</p>
                     <image class="icon-check hidden" src="./assets/checkmark.jpg">
                 </div>
+            </div>
         </nav>
 
         <nav>
@@ -69,7 +70,7 @@
                 <h6>Now, your drink</h6>
             </div>
 
-            <div class="main-course">
+            <div class="main-course drinkChooser">
                 <div class="chooser">
                     <img class="image" src="./assets/coca-cola.jpg">
                     <p><strong>Coke</strong></p>
@@ -106,7 +107,7 @@
 
 
         <nav>
-            <div class="dessert">
+            <div class="dessert dessertChooser">
                 <h6>Finally, your dessert</h6>
             </div>
 
@@ -145,6 +146,7 @@
             </div>
         </nav>
     </section>
+
     <footer>
         <div class="baseboard">
             <div class="border" onclick="acionarBotao(this);fazerPedido(this)">
@@ -152,6 +154,7 @@
             </div>
         </div>
     </footer>
+    
     <script src="settings.js"></script>
 </body>
 
