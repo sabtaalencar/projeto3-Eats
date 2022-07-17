@@ -31,7 +31,7 @@
             </div>
 
             <div class="main-course foodCards">
-                <div class="chooser" onclick="foodSelection(this)">
+                <div class="chooser" onclick="foodSelection(this, 'Filet Steak', 30.00)">
                     <img class="image" src="./assets/picanha.jpg">
                     <p><strong>Filet Steak</strong></p>
                     <p>Carne de qualidade</p>
@@ -39,7 +39,7 @@
                     <image class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
 
-                <div class="chooser" onclick="foodSelection(this)">
+                <div class="chooser" onclick="foodSelection(this , 'Rib Eye Steak', 30.00)">
                     <img class="image" src="./assets/alcatra.jpg">
                     <p><strong>Rib Eye Steak</strong></p>
                     <p>Carne de qualidade</p>
@@ -47,7 +47,7 @@
                     <image class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
 
-                <div class="chooser" onclick="foodSelection(this)">
+                <div class="chooser" onclick="foodSelection(this, 'Rib', 30.00)">
                     <img class="image" src="./assets/costelinha.jpg">
                     <p><strong>Rib</strong></p>
                     <p>Carne de qualidade</p>
@@ -55,7 +55,7 @@
                     <image class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
 
-                <div class="chooser" onclick="foodSelection(this)">
+                <div class="chooser" onclick="foodSelection(this, 'Barbecue', 30.00)">
                     <img class="image" src="./assets//churrasco2.jpg">
                     <p><strong>Barbecue</strong></p>
                     <p>Carne de qualidade</p>
@@ -71,7 +71,7 @@
             </div>
 
             <div class="main-course drinkCards">
-                <div class="chooser">
+                <div class="chooser" onclick="drinkSelection(this)">
                     <img class="image" src="./assets/coca-cola.jpg">
                     <p><strong>Coke</strong></p>
                     <p>Carne de qualidade</p>
@@ -79,7 +79,7 @@
                     <image class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
 
-                <div class="chooser">
+                <div class="chooser" onclick="drinkSelection(this)">
                     <img class="image" src="./assets/refrigerantes.jpg">
                     <p><strong>Soda</strong></p>
                     <p>Carne de qualidade</p>
@@ -87,7 +87,7 @@
                     <image class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
 
-                <div class="chooser">
+                <div class="chooser" onclick="drinkSelection(this)">
                     <img class="image" src="./assets/sucosorganico.jpg">
                     <p><strong>Juices</strong></p>
                     <p>Carne de qualidade</p>
@@ -95,7 +95,7 @@
                     <image class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
 
-                <div class="chooser">
+                <div class="chooser" onclick="drinkSelection(this)">
                     <img class="image" src="./assets/schweppes.jpg">
                     <p><strong>Schweppes</strong></p>
                     <p>Carne de qualidade</p>
@@ -107,12 +107,12 @@
 
 
         <nav>
-            <div class="dessert dessertCards">
+            <div class="dessert ">
                 <h6>Finally, your dessert</h6>
             </div>
 
-            <div class="main-course">
-                <div class="chooser">
+            <div class="main-course dessertCards">
+                <div class="chooser" onclick="dessertSelection(this)">
                     <img class="image" src="./assets/cupcake.jpg">
                     <p><strong>Cupcake</strong></p>
                     <p>Carne de qualidade</p>
@@ -120,7 +120,7 @@
                     <image class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
 
-                <div class="chooser">
+                <div class="chooser" onclick="dessertSelection(this)">
                     <img class="image" src="./assets/brownie.jpg">
                     <p><strong>Brownie Cake</strong></p>
                     <p>Carne de qualidade</p>
@@ -128,7 +128,7 @@
                     <image class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
 
-                <div class="chooser">
+                <div class="chooser" onclick="dessertSelection(this)">
                     <img class="image" src="./assets/petitgateau.jpeg">
                     <p><strong>Petit Gateau</strong></p>
                     <p>Carne de qualidade</p>
@@ -136,7 +136,7 @@
                     <image class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
 
-                <div class="chooser">
+                <div class="chooser" onclick="dessertSelection(this)">
                     <img class="image" src="./assets/bolo de limão.png">
                     <p><strong>Banoffee</strong></p>
                     <p>Carne de qualidade</p>
@@ -149,7 +149,7 @@
 
     <footer>
         <div class="baseboard">
-            <div class="border" onclick="acionarBotao(this);fazerPedido(this)">
+            <div class="border" onclick="greenLight(this);fazerPedido(this)">
                 <p class="paragrafo">Selecione os 3 itens <br />para fechar o pedido</p>
             </div>
         </div>
