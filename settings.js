@@ -23,7 +23,7 @@ let drink = null;
 let dessert = null;
 let total = 0;*/
 
-function foodSelection(element, foodsName, value) {
+/*function foodSelection(element, foodsName, value) {
     console.log(element, foodsName, value)
     let card = document.querySelector(".borderGreen");
     let icon = document.querySelector(".hidden");
@@ -37,7 +37,7 @@ function foodSelection(element, foodsName, value) {
     total = value;
     food = element.innerHTML;
     greenLight();*/
-}
+
 /*
 function drinkSelection(element) {
     let card = document.querySelector(".drinkCards .borderGreen"); //para não desmarcar os cards do foodSelectio é necessário fazer uma descrição exata do elemento que quero manipular (esse eu peguei o conteiner que tem descendentes com a borda)
@@ -77,12 +77,27 @@ function greenLight(element) {
     element.innerHTML = '<p>Finalizar Pedido</p>';
 }
 
-function fazerPedido() {
-    console.log(fazerPedido)
-}
 
-/*function modal(){
-
+/*
 }*/
 
 //quando eu clicar no último card o modal deve aparececr
+
+
+function confirmarPedido() {
+    let confirm = document.querySelector(".modal-container");
+    //let confirm = document.getElementById('.show-modal');
+    console.log(confirm)
+
+    if (confirm !== undefined) {
+        confirm.classList.remove('hidden')
+    }
+}
+function fazerPedido() {
+    console.log(fazerPedido)
+    mensagem.innerHTML = ` Olá, gostaria de fazer o pedido:
+ - Prato: ${nameF}
+ - Bebida: ${nameD}
+ - Sobremesa: ${nameDessert}
+ Total: ${total}`
+}
