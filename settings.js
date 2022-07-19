@@ -1,12 +1,8 @@
+function foodSelection(element){
+    let cards = document.querySelector(".borderGreen");
 
-function foodSelection(element) {
-    let border = document.querySelector('.foodCards .chooser');
-    let icon = document.querySelector('.foodCards .chooser .icon-check');
-
-    if (border !== null) {
-        border.classList.remove('borderGreen');
-        icon.classList.add('hidden')
+    if(cards !== null){
+        cards.classList.remove("borderGreen")
     }
-    element.classList.add('borderGreen');
-    icon.classList.remove('hidden');
+    element.classList.add("borderGreen")
 }
