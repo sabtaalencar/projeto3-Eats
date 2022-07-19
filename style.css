@@ -266,7 +266,6 @@ body {
         position: absolute;
         bottom: 5%;
         left: 80%;
-        image-rendering : url(./assets/checkmark.png);
     }
 
     .drink h6,
