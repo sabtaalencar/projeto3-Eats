@@ -21,12 +21,15 @@ function drinkSelection(element) {
 
 }
 
+
 function dessertSelection(element) {
-    let cardsFood = document.querySelector(".dessertCards .borderGreen");
+    let cardsDrink = document.querySelector(".dessertCards .borderGreen");
+    let icon = document.querySelector(".dessertCards .icon-check")
+    console.log(icon)
 
 
-    if (cardsFood !== null) {
-        cardsFood.classList.remove("borderGreen");
+    if (cardsDrink !== null) {
+        cardsDrink.classList.remove("borderGreen");
 
     }
     element.classList.add("borderGreen");
