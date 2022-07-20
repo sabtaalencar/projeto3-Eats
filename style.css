@@ -174,10 +174,11 @@ body {
 
     .meal {
         position: sticky;
-        left: 2%;
+        left: 4.8%;
         margin-top: 30%;
+        margin-bottom: 5%;
+        margin-right: 10%;
         margin-left: 4.8%;
-        margin-bottom: 3%;
     }
 
 
@@ -259,6 +260,10 @@ body {
         display: none;
     }
 
+    .hide {
+        display: none;
+    }
+
     .icon-check {
         width: 15px;
         height: 15px;
@@ -282,10 +287,12 @@ body {
     .dessert,
     .drink {
         position: sticky;
-        left: 2%;
+        left: 4.8%;
         margin-top: 10%;
         margin-left: 4.8%;
         margin-bottom: 5%;
+        margin-left: 4.8%;
+        margin-right: 10%;
     }
 
     .baseboard {
@@ -344,6 +351,7 @@ body {
         align-items: center;
         font-family: 'roboto';
         color: #FFFFFF;
+        display: none;
     }
 
     .modal {
@@ -355,41 +363,58 @@ body {
         border-radius: 10px;
         box-shadow: rgba(0, 0 0, 0.25);
         Offset: 0, 0 rgba(254, 255, 254, 0.973);
-        display: grid;
-        justify-content: center;
+        text-align: center;
         padding: 5%;
+
+
     }
 
-    .modal :nth-child(1) {
+    .modal h6 {
         font-family: 'Roboto';
         font-weight: Bold;
         font-size: 22px;
-        line-height: 26px;
-        letter-spacing: 1.8%;
-        text-align: center;
+        margin-bottom: 8%;
     }
 
-    .modal :nth-child(8) {
+    .modal ul li {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .drink {
+        margin-left: 2px;
+        margin-top: 6%;
+    }
+
+    .price-drink {
+        margin-bottom: 0;
+        margin-top: 6%;
+        margin-left: -45%;
+    }
+
+     span.dessert{
+        margin-bottom: 0;
+        margin-top: 1%;
+        margin-left: 2px;
+    }
+
+    .total {
+        margin-top: 10%;
+        Font-family: 'Roboto';
         font-weight: Bold;
         font-size: 22px;
-        line-height: 26px;
-        letter-spacing: 1.8%;
-        Fill: Solid;
     }
 
-    .modal :nth-child(12) {
-        text-align: center;
+    .valor {
+        margin-top: 10%;
+        Font-family: 'Roboto';
         font-weight: Bold;
-        Font-size: 20px;
-        Line-height: 23px;
-        Line-height: 100%;
-        text-align: center;
-        vertical-align: center;
-        letter-spacing: 1.8%;
+        font-size: 22px;
     }
 
-    .button {
-        width: 265px;
+    .confirm {
+        width: 270px;
         height: 52px;
         font-weight: Bold;
         font-size: 22px;
@@ -399,7 +424,17 @@ body {
         background-color: #FFFFFF;
         border-radius: 100px;
         padding: 6%;
+        border: none;
+        margin-top: 10%;
+
     }
 
+    .cancel {
+        background-color: transparent;
+        border: none;
+        color: #FFFFFF;
+        font-weight: bold;
+        height: 50px;
+    }
 
 }
