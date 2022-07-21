@@ -124,7 +124,7 @@ function actionButton() {
 
 
 //função fará as pergunats e mostrará o modal
-function fazerPedido() {
+function orderFood() {
     if (itemsCount === 3) {
         clientName = prompt("Tell us your name, please!");
         clientAddress = prompt("And your address!");
@@ -171,7 +171,7 @@ function fazerPedido() {
 }
 
 
-function confirmarPedido() {
+function orderConfirm() {
 
     let mensagem = `Hi, I would like to order: \n - Food Plate: ${nameOfFood} \n - Drink: ${nameOfDrink} \n - Dessert: ${nameOfDessert} \n Total: ${total} \n Name: ${clientName} \n Address ${clientAddress} `;
 
@@ -183,7 +183,7 @@ function confirmarPedido() {
 
 }
 
-function cancelarPedido() {
+function orderCancel() {
 
 
     let cancel = document.querySelector(".modal-container");

@@ -35,7 +35,7 @@
                     <img class="image" src="./assets/picanha.jpg">
                     <p class="title-meal"><strong>Filet Steak</strong></p>
                     <p>The best Food</p>
-                    <p class="priceMeal">$ 30.00</p>
+                    <p class="priceMeal">$ 12.00</p>
                     <img id="icon-check" class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
 
@@ -43,7 +43,7 @@
                     <img class="image" src="./assets/alcatra.jpg">
                     <p class="ttitle-meal"><strong>Rib Eye Steak</strong></p>
                     <p>The best Food</p>
-                    <p class="priceMeal">$ 30.00</p>
+                    <p class="priceMeal">$ 15.80</p>
                     <img class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
 
@@ -51,7 +51,7 @@
                     <img class="image" src="./assets/costelinha.jpg">
                     <p class="title-meal"><strong>Rib</strong></p>
                     <p>The best Food</p>
-                    <p class="priceMeal">$ 30.00</p>
+                    <p class="priceMeal">$ 16.30</p>
                     <img class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
 
@@ -59,7 +59,7 @@
                     <img class="image" src="./assets//churrasco2.jpg">
                     <p class="title-meal"><strong>Barbecue</strong></p>
                     <p>The best Food</p>
-                    <p class="priceMeal">$ 30.00</p>
+                    <p class="priceMeal">$ 19.60</p>
                     <img class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
             </div>
@@ -75,7 +75,7 @@
                     <img class="image" src="./assets/coca-cola.jpg">
                     <p class="titleDrink"><strong>Coke</strong></p>
                     <p>The Drink</p>
-                    <p class="priceDrink">$ 2.00</p>
+                    <p class="priceDrink">$ 2.50</p>
                     <img class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
 
@@ -83,7 +83,7 @@
                     <img class="image" src="./assets/refrigerantes.jpg">
                     <p class="titleDrink"><strong>Soda</strong></p>
                     <p>Drink it</p>
-                    <p class="priceDrink">$ 3.00</p>
+                    <p class="priceDrink">$ 3.10</p>
                     <img class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
 
@@ -132,7 +132,7 @@
                     <img class="image" src="./assets/petitgateau.jpeg">
                     <p class="titleDessert"><strong>Petit Gateau</strong></p>
                     <p>Delicious dessert</p>
-                    <p class="priceDessert">$ 5.00</p>
+                    <p class="priceDessert">$ 5.06</p>
                     <img class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
 
@@ -140,7 +140,7 @@
                     <img class="image" src="./assets/bolo de limão.png">
                     <p class="titleDessert"><strong>Banoffee</strong></p>
                     <p>Delicious dessert</p>
-                    <p class="priceDessert">$ 3.00</p>
+                    <p class="priceDessert">$ 3.10</p>
                     <img class="icon-check hidden" src="./assets/checkmark.png">
                 </div>
             </div>
@@ -149,8 +149,8 @@
 
     <footer>
         <div class="baseboard">
-            <div class="border" onclick="fazerPedido()">
-                <p class="paragrafo">Selecione os 3 itens <br />para fechar o pedido</p>
+            <div class="border" onclick="orderFood()">
+                <p class="paragrafo">Select  3 items <br />to complete the order</p>
             </div>
         </div>
     </footer>
@@ -158,7 +158,7 @@
 
     <div class="modal-container">
         <div class="modal">
-            <h6>Confirme seu pedido</h6>
+            <h6>Confirm your order</h6>
 
             <ul>
                 <li>
@@ -184,8 +184,8 @@
             </ul>
 
 
-            <p class="confirm" onclick="confirmarPedido()">Tudo certo, pode pedir!</p>
-            <button class="cancel" onclick="cancelarPedido()">Cancelar</button>
+            <p class="confirm" onclick="orderConfirm()">Ok, You can order!</p> 
+            <button class="cancel" onclick="orderCancel()">Cancel</button>
 
         </div>
     </div>
