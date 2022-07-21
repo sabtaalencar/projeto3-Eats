@@ -125,11 +125,11 @@ function actionButton() {
 
 //função fará as pergunats e mostrará o modal
 function fazerPedido() {
-    if (nameOfFood !== undefined && nameOfDrink !== undefined && nameOfDessert !== undefined) {
+    if (itemsCount === 3) {
         clientName = prompt("Tell us your name, please!");
         clientAddress = prompt("And your address!");
 
-        let showModal = document.querySelector(".modal");
+        let showModal = document.querySelector(".modal-container");
 
 
 
@@ -163,6 +163,7 @@ function fazerPedido() {
                 style: 'currency', currency: 'USD'
             })}`
         console.log(total)
+
         showModal.classList.remove("hidden");
 
     }
@@ -172,14 +173,7 @@ function fazerPedido() {
 
 function confirmarPedido() {
 
-    let mensagem = `Hi, I would like to order: 
-                    - Food Plate: ${nameOfFood} 
-                   - Drink: ${nameOfDrink}\n
-                   - Dessert: ${nameOfDessert} 
-                    Total: ${total} 
-                            
-                    Name: ${clientName} 
-                    Address ${clientAddress} `;
+    let mensagem = `Hi, I would like to order: \n - Food Plate: ${nameOfFood} \n - Drink: ${nameOfDrink} \n - Dessert: ${nameOfDessert} \n Total: ${total} \n Name: ${clientName} \n Address ${clientAddress} `;
 
 
     mensagem = encodeURIComponent(mensagem);
@@ -191,11 +185,14 @@ function confirmarPedido() {
 
 function cancelarPedido() {
 
+
     let cancel = document.querySelector(".modal-container");
 
-
     if (cancel !== undefined) {
+
         cancel.classList.remove("hidden");
-        console.log(cancel)
+
     }
+    cancel.classList.add("hidden");
+    console.log(cancel)
 }
