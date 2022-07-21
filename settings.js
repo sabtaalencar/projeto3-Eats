@@ -157,7 +157,7 @@ function orderFood() {
         dessertPrice.innerHTML = `${priceDessert}`;
         console.log(dessertPrice)
 
-       total = document.querySelector(".value");
+        total = document.querySelector(".value");
         total.innerHTML = `${(priceMeal + priceDessert + priceDrink).toLocaleString('en-US',
             {
                 style: 'currency', currency: 'USD'
@@ -167,14 +167,17 @@ function orderFood() {
         showModal.classList.remove("hidden");
 
     }
-   // showModal.classList.add("hidden");
+    // showModal.classList.add("hidden");
 
 }
 
 
 function orderConfirm() {
 
-    let mensagem = `Hi, I would like to order: \n - Food Plate: ${nameOfFood} \n - Drink: ${nameOfDrink} \n - Dessert: ${nameOfDessert} \n Total: ${total} \n Name: ${clientName} \n Address ${clientAddress} `;
+    let mensagem = `Hi, I would like to order: \n - Food Plate: ${nameOfFood} \n - Drink: ${nameOfDrink} \n - Dessert: ${nameOfDessert} \n Total: ${(priceMeal + priceDessert + priceDrink).toLocaleString('en-US',
+        {
+            style: 'currency', currency: 'USD'
+        })} \n Name: ${clientName} \n Address ${clientAddress} `;
 
 
     mensagem = encodeURIComponent(mensagem);
