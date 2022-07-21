@@ -5,7 +5,7 @@ let nameOfDessert = null;
 let priceMeal, priceDessert, priceDrink, total, clientName, clientAddress;
 
 
-
+let itemsCount = 0;
 
 
 
@@ -19,16 +19,20 @@ function foodSelection(element, food, value) {
         cardsFood.classList.remove("borderGreen");
         icon.classList.add("hidden")
 
+    } else {
+        element.classList.add("borderGreen");
+        let tag = document.querySelector(".foodCards .borderGreen .icon-check");//deve ser feita uma variável pra declarar o icone pra ele deixar de ser nulo
+        tag.classList.remove("hidden");
+
+
+        itemsCount = itemsCount + 1; //contador o card pra acionar o botao
+        console.log(itemsCount)
     }
-    element.classList.add("borderGreen");
-    let tag = document.querySelector(".foodCards .borderGreen .icon-check");//deve ser feita uma variável pra declarar o icone pra ele deixar de ser nulo
-    tag.classList.remove("hidden");
-
-
 
     nameOfFood = food;//document.querySelector(".title-meal").innerHTML;
     priceMeal = value;//document.querySelector(".priceMeal").innerHTML;
     console.log(nameOfFood)
+
     actionButton();
 }
 
@@ -40,16 +44,20 @@ function drinkSelection(element, drink, value) {
     if (card !== null) {
         card.classList.remove('borderGreen');
         icon.classList.add("hidden");//nao precisa está no DOM, A Classe da borda
-    }
-    element.classList.add('borderGreen'); //o element é equivalente ao this
-    let tag = document.querySelector(".drinkCards .borderGreen .icon-check");
-    tag.classList.remove("hidden");
+    } else {
+        element.classList.add('borderGreen'); //o element é equivalente ao this
+        let tag = document.querySelector(".drinkCards .borderGreen .icon-check");
+        tag.classList.remove("hidden");
 
+        itemsCount = itemsCount + 1;
+        console.log(itemsCount)
+    }
 
     nameOfDrink = drink;
     priceDrink = value;
     console.log(nameOfDrink)
     console.log(priceDrink)
+
     actionButton();
 }
 
@@ -64,12 +72,15 @@ function dessertSelection(element, dessert, value) {
     if (cardsDrink !== null) {
         cardsDrink.classList.remove("borderGreen");
         icon.classList.add("hidden");
+    } else {
+        element.classList.add("borderGreen");
+        let tag = document.querySelector(".dessertCards .borderGreen .icon-check");
+        tag.classList.remove("hidden");
 
-
+        itemsCount = itemsCount + 1;
+        console.log(itemsCount)
     }
-    element.classList.add("borderGreen");
-    let tag = document.querySelector(".dessertCards .borderGreen .icon-check");
-    tag.classList.remove("hidden");
+
 
 
     nameOfDessert = dessert; //document.querySelector(".titleDessert").innerHTML; //estou selecionando a classe e acessando o conteúdo da classe no html
@@ -81,31 +92,34 @@ function dessertSelection(element, dessert, value) {
 
 //nao tem onclick, nao é necessário
 function actionButton() {
-    alert("oi")
-    
-    if (nameOfFood !== undefined && nameOfDrink !== undefined && nameOfDessert !== undefined) {
-        console.log("oi")
-        let greenButton = document.querySelector(".border .changeColor");
-        greenButton.classList.remove("changeColor");
+
+    if (itemsCount === 3) {
+        const greenButton = document.querySelector(".border"); //pra fazer funcionar fiz classes de nivel e adicionei o opacity
+        greenButton.classList.add("changeColor");
         greenButton.innerHTML = `Fechar Pedido`;
+
     }
-    let button = document.querySelector(".border .changeColor");
-    button.classList.add("changeColor");
-    button.innerHTML = `Fechar Pedido`;
-
-
-    /* let contador = 0;
-     while (contador === nameOfFood && contador === nameOfDrink && contador === nameOfDessert  ) {
-         let greenButton = document.querySelector(".border");
-         greenButton.classList.add("changeColor");
-         greenButton.innerHTML = `Fechar Pedido`
-         contador++;
-         console.log(contador)
-     }*/
-
 }
 
-
+/* if (nameOfFood !== undefined && nameOfDrink !== undefined && nameOfDessert !== undefined) {
+     console.log("oi")
+     let greenButton = document.querySelector(".border");
+     greenButton.classList.remove("changeColor");
+     greenButton.innerHTML = `Fechar Pedido`;
+ }
+ let button = document.querySelector(".border");
+ button.classList.add("changeColor");
+ button.innerHTML = `Fechar Pedido`;
+ 
+ 
+ /* let contador = 0;
+  while (contador === 3 ) {
+      let greenButton = document.querySelector(".border");
+      greenButton.classList.add("changeColor");
+      greenButton.innerHTML = `Fechar Pedido`
+      contador++;
+      console.log(contador)
+  }*/
 
 
 
@@ -116,7 +130,7 @@ function fazerPedido() {
         clientAddress = prompt("And your address!");
 
         let showModal = document.querySelector(".modal");
-        showModal.classList.remove("hidden");
+
 
 
         let mealTitle = document.querySelector(".mealTitle");
@@ -149,15 +163,11 @@ function fazerPedido() {
                 style: 'currency', currency: 'USD'
             })}`
         console.log(total)
-
-
-        
+        showModal.classList.remove("hidden");
 
     }
 
 }
-
-
 
 
 function confirmarPedido() {
