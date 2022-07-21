@@ -157,7 +157,7 @@ function orderFood() {
         dessertPrice.innerHTML = `${priceDessert}`;
         console.log(dessertPrice)
 
-        let total = document.querySelector(".value");
+       total = document.querySelector(".value");
         total.innerHTML = `${(priceMeal + priceDessert + priceDrink).toLocaleString('en-US',
             {
                 style: 'currency', currency: 'USD'
@@ -167,6 +167,7 @@ function orderFood() {
         showModal.classList.remove("hidden");
 
     }
+   // showModal.classList.add("hidden");
 
 }
 
