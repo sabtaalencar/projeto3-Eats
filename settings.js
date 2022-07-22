@@ -8,6 +8,18 @@ let priceMeal, priceDessert, priceDrink, total, clientName, clientAddress;
 let itemsCount = 0;
 
 
+// é uma forma de conversão fazer uma função somente para converter, mas o modo mais fácil é converter direto nas funções onde possuem os valores Ah o tofixed e o localeString transformam o number em string
+/*function convertionNumber(price) {
+
+    let value = price.toLocaleString('en-US',
+    {
+        style: 'currency', currency: 'USD'
+    })
+    
+    value = Number(price);
+
+    return price;
+}*/
 
 function foodSelection(element, food, value) {
 
@@ -30,7 +42,7 @@ function foodSelection(element, food, value) {
     }
 
     nameOfFood = food;//document.querySelector(".title-meal").innerHTML;
-    priceMeal = value;//document.querySelector(".priceMeal").innerHTML;
+    priceMeal = Number(value);//.toFixed(2);//document.querySelector(".priceMeal").innerHTML;
     console.log(nameOfFood)
 
     actionButton();
@@ -54,7 +66,7 @@ function drinkSelection(element, drink, value) {
     }
 
     nameOfDrink = drink;
-    priceDrink = value;
+    priceDrink = Number(value)//.toFixed(2);
     console.log(nameOfDrink)
     console.log(priceDrink)
 
@@ -84,7 +96,7 @@ function dessertSelection(element, dessert, value) {
 
 
     nameOfDessert = dessert; //document.querySelector(".titleDessert").innerHTML; //estou selecionando a classe e acessando o conteúdo da classe no html
-    priceDessert = value; //document.querySelector(".priceDessert").innerHTML;
+    priceDessert = Number(value)//.toFixed(2); //document.querySelector(".priceDessert").innerHTML;
     console.log(nameOfDessert)
 
     actionButton(); //chamando a função pra que ela reconheça os cards serem acionados
@@ -138,7 +150,7 @@ function orderFood() {
         console.log(mealTitle)
 
         let foodPrice = document.querySelector(".price-food");
-        foodPrice.innerHTML = `${priceMeal}`;
+        foodPrice.innerHTML = `$${(priceMeal).toFixed(2)}`;
         console.log(foodPrice)
 
         let drinkTitle = document.querySelector(".drinkTitle");
@@ -146,7 +158,7 @@ function orderFood() {
         console.log(drinkTitle)
 
         let drinkPrice = document.querySelector(".price-drink");
-        drinkPrice.innerHTML = `${priceDrink}`
+        drinkPrice.innerHTML = `$${(priceDrink).toFixed(2)}`
         console.log(drinkPrice)
 
         let dessertTitle = document.querySelector(".dessertTitle");
@@ -154,11 +166,11 @@ function orderFood() {
         console.log(dessertTitle)
 
         let dessertPrice = document.querySelector(".price-dessert");
-        dessertPrice.innerHTML = `${priceDessert}`;
+        dessertPrice.innerHTML = `$${(priceDessert).toFixed(2)}`;  //poderia colocar o localestring em cada innerhtml mas resolvi fazer o mais fácil :)
         console.log(dessertPrice)
 
         total = document.querySelector(".value");
-        total.innerHTML = `${(priceMeal + priceDessert + priceDrink).toLocaleString('en-US',
+        total.innerHTML = `${Number(priceMeal + priceDessert + priceDrink).toLocaleString('en-US',
             {
                 style: 'currency', currency: 'USD'
             })}`
@@ -174,10 +186,7 @@ function orderFood() {
 
 function orderConfirm() {
 
-    let mensagem = `Hi, I would like to order: \n - Food Plate: ${nameOfFood} \n - Drink: ${nameOfDrink} \n - Dessert: ${nameOfDessert} \n Total: ${(priceMeal + priceDessert + priceDrink).toLocaleString('en-US',
-        {
-            style: 'currency', currency: 'USD'
-        })} \n Name: ${clientName} \n Address ${clientAddress} `;
+    let mensagem = `Hi, I would like to order: \n - Food Plate: ${nameOfFood} \n - Drink: ${nameOfDrink} \n - Dessert: ${nameOfDessert} \n Total: ${total} \n Name: ${clientName} \n Address ${clientAddress} `;
 
 
     mensagem = encodeURIComponent(mensagem);
