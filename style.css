@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
-/*
 * {
     box-sizing: border-box;
 }
@@ -8,51 +7,154 @@ body {
     background-color: #E5E5E5;
 }
 
-/*atual*/
-/*
+section {
+    margin-bottom: 30%;
+}
+
 .title {
     position: fixed;
+    z-index: 1;
     top: 0;
-    bottom: 20%;
+    right: 0;
+    left: 0;
     width: 100%;
     height: 92px;
     background-color: #CF2B2B;
     filter: drop-shadow(0 0 0.75rem);
     border-radius: 4px;
     Offset: 0px, 4px(rgba(0, 0, 0, 0.25));
-    z-index: 1;
+    overflow-x: hidden !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .title h1 {
+    height: 50px;
     font-family: 'Righteous';
     font-style: normal;
-    font-size: 50px;
-    line-height: 100%;
-    letter-spacing: -2.2%;
+    font-size: 55px;
     color: #FFFFFF;
-    margin: 0.5% 2%;
+    letter-spacing: -1.2%;
+    padding-left: 2%;
 }
 
 .title h4 {
     font-family: 'Roboto';
     font-style: normal;
-    font-size: 100%;
-    line-height: 2%;
+    font-size: 26.5px;
     color: #FFFFFF;
-    margin: 0.7% 2%;
+    padding-left: 2%;
 }
 
-.section {
-    width: 100%;
+nav {
     overflow-x: scroll;
+    scrollbar-width: none;
 }
 
 .meal {
-    margin-top: 7%;
-    margin-left: 2%;
-    margin-bottom: 2%;
+    position: sticky;
+    left: 4.8%;
+    margin-top: 30%;
+    margin-bottom: 5%;
+    margin-right: 10%;
+    margin-left: 4.8%;
 }
 
+
+
+.main-course {
+    display: flex;
+}
+
+.chooser {
+    width: 172px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: #FFFFFF;
+    filter: drop-shadow(0 0 0.95 white);
+    Offset: 0, 0(rgba(209, 203, 203, 0.986));
+    margin-left: 5%;
+    /*cima direita baixo esquerda*/
+    background-color: #FFFFFF;
+    fill: solid;
+    position: relative;
+}
+
+/*bordergreen*/
+.borderGreen {
+    fill: solid;
+    color: #32B72F;
+    filter: drop-shadow(0 0 0.45rem green);
+    border-radius: 10px;
+    Offset: 0, 0 rgba(254, 255, 254, 0.973);
+    box-shadow: 1px 1px 15px -6px, inset 0 0 0 5px #32B72F;
+}
+
+.image {
+    margin: 1.5vw 2.5vw;
+    width: 30vw;
+    height: 18vw;
+    border-radius: 2vw;
+    object-fit: cover;
+}
+
+.chooser :nth-child(2) {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+    align-self: flex-start;
+    vertical-align: top;
+    margin-left: 5%;
+}
+
+.chooser :nth-child(3) {
+    font-family: 'Roboto';
+    font-style: light;
+    font-size: 12px;
+    letter-spacing: 1.8%;
+    line-height: 18px;
+    color: #A6A6A6;
+    align-self: flex-start;
+    vertical-align: top;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.chooser :nth-child(4) {
+    width: 50%;
+    font-family: 'Roboto';
+    Font-style: normal;
+    Font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    align-self: flex-start;
+    vertical-align: top;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.hidden {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.icon-check {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5%;
+    left: 80%;
+}
+
+.drink h6,
+.dessert h6,
 .meal h6 {
     font-family: 'Righteous';
     font-style: normal;
@@ -62,61 +164,162 @@ body {
     color: #333333;
 }
 
-.chooser {
-    width: 50px;
-    height: 200px;
-    border-radius: 2%;
-    color: #FFFFFF;
-    filter: drop-shadow(0 0 0.75rem);
-    Offset: 0, 0(rgba(0, 0, 0, 0.25));
-    margin: 2% -1% 2% 2%;
-    /*cima direita baixo esquerda*/
-/*background-color: #FFFFFF;
-}*/
-/*
-.main-course {
-    display: flex;
+.dessert,
+.drink {
+    position: sticky;
+    left: 4.8%;
+    margin-top: 10%;
+    margin-left: 4.8%;
+    margin-bottom: 5%;
+    margin-left: 4.8%;
+    margin-right: 10%;
+}
+
+.baseboard {
     width: 100%;
+    height: 80px;
+    border-radius: 4px;
+    filter: drop-shadow(rgba(0, 0, 0, 0.25));
+    background-color: #ffffff;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
 }
 
-.chooser img {
-    width: 85%;
-    height: 35%;
-    border-radius: 5%;
-    margin: 7%;
-}
-
-.chooser :nth-child(2) {
+.border {
+    width: 88%;
+    height: 60px;
+    background-color: #a6a6a6;
+    border-radius: 30px;
     font-family: 'Roboto';
+    font-size: 20px;
+    vertical-align: top;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basebord .border.changeColor {
+    opacity: 0;
+}
+
+/*greenLight*/
+.baseboard .border.changeColor {
+    background: #32B72F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 1;
+}
+
+.modal-container.hidden {
+    /*usei o sistema de classes para funcionar o modal*/
+    display: none;
+}
+
+.modal-container.hidden .modal {
+    display: initial;
+}
+
+.modal-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'roboto';
+    color: #FFFFFF;
+}
+
+.modal {
+    width: 377px;
+    height: 353px;
+    background: #50D074;
+    width: 20%;
+    min-width: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0 0, 0.25);
+    Offset: 0, 0 rgba(254, 255, 254, 0.973);
+    text-align: center;
+    padding: 5%;
+
+
+}
+
+.modal h6 {
+    font-family: 'Roboto';
+    font-weight: Bold;
+    font-size: 22px;
+    margin-bottom: 8%;
+}
+
+.modal ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 16px;
+}
+
+.drink {
+    margin-left: 2px;
+    margin-top: 6%;
+}
+
+span.dessert {
+    margin-bottom: 0;
+    margin-top: 1%;
+    margin-left: 2px;
+}
+
+.total{
+font-weight: bold;
+}
+.valor {
+    margin-top: 10%;
+    Font-family: 'Roboto';
+    font-weight: Bold;
+    font-size: 22px;
+}
+
+.confirm {
+    width: 270px;
+    height: 52px;
+    font-weight: Bold;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 1.8%;
+    color: #50D074;
+    background-color: #FFFFFF;
+    border-radius: 100px;
+    padding: 6%;
+    border: none;
+    margin-top: 10%;
+
+}
+
+.cancel {
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
     font-weight: bold;
-    font-size: 19px;
-    line-height: 100%;
-    color: #333333;
-    margin-left: 5%;
+    font-size: 22px;
+    height: 50px;
 }
-
-.chooser :nth-child(3) {
-    font-family: 'Roboto';
-    font-style: light;
-    font-size: 15px;
-    line-height: 18px;
-    Line-height: 100%;
-    color: #A6A6A6;
-    margin-left: 5%;
-    margin-top: 5%;
-}
-
-.chooser :nth-child(4) {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-size: 16px;
-    line-height: 19px;
-    line-height: 100%;
-    color: #000000;
-    margin-left: 5%;
-    margin-top: 15%;
-
-}*/
 
 @media (max-width: 414px) {
     * {
@@ -343,15 +546,16 @@ body {
         opacity: 1;
     }
 
-    .modal-container.hidden {   /*usei o sistema de classes para funcionar o modal*/
+    .modal-container.hidden {
+        /*usei o sistema de classes para funcionar o modal*/
         display: none;
     }
 
-    .modal-container.hidden .modal{
-        display:initial;
+    .modal-container.hidden .modal {
+        display: initial;
     }
 
-       .modal-container {
+    .modal-container {
         width: 100%;
         height: 100%;
         position: fixed;
@@ -391,18 +595,12 @@ body {
     .modal ul li {
         display: flex;
         justify-content: space-between;
-
+        margin: 16px 16px;
     }
 
     .drink {
         margin-left: 2px;
         margin-top: 6%;
-    }
-
-    .price-drink {
-        margin-bottom: 0;
-        margin-top: 6%;
-        margin-left: -45%;
     }
 
     span.dessert {
@@ -411,13 +609,9 @@ body {
         margin-left: 2px;
     }
 
-    .total {
-        margin-top: 10%;
-        Font-family: 'Roboto';
-        font-weight: Bold;
-        font-size: 20px;
-    }
-
+   .total{
+    font-weight: bold;
+   }
     .valor {
         margin-top: 10%;
         Font-family: 'Roboto';
