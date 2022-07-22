@@ -180,7 +180,7 @@ function orderFood() {
 
     }
     // showModal.classList.add("hidden");
-//jjjjjj
+}
 
 
 function orderConfirm() {
