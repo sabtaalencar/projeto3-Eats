@@ -410,10 +410,10 @@ span.dessert {
     .borderGreen {
         fill: solid;
         color: #32B72F;
-        filter: drop-shadow(0 0 0.45rem green);
+        filter: drop-shadow(0 0 0.45rem rgb(117, 255, 117));
         border-radius: 10px;
-        Offset: 0, 0 rgba(254, 255, 254, 0.973);
-        box-shadow: 1px 1px 15px -6px, inset 0 0 0 5px #32B72F;
+        Offset: 0, 0 rgb(254, 255, 254);
+        box-shadow: 1px 1px 10px -6px, inset 0 0 0 5px #32B72F;
     }
 
     .image {
@@ -476,6 +476,7 @@ span.dessert {
         position: absolute;
         bottom: 5%;
         left: 80%;
+        filter: drop-shadow(0 4px rgba(0, 0, 0, 0.25));
     }
 
     .drink h6,
