@@ -106,36 +106,25 @@ function dessertSelection(element, dessert, value) {
 
 //nao tem onclick, nao é necessário
 function actionButton() {
-
     if (itemsCount === 3) {
         const greenButton = document.querySelector(".border"); //pra fazer funcionar fiz classes de nivel e adicionei o opacity
         greenButton.classList.add("changeColor");
         greenButton.innerHTML = `Fechar Pedido`;
     }
+
+   /* ESSE METODO TB FUNCIONA
+   if (nameOfFood && nameOfDrink && nameOfDessert) {
+    
+        let greenButton = document.querySelector(".border");
+        greenButton.classList.remove("changeColor");
+   
+    }
+    
+    let button = document.querySelector(".border");
+    button.classList.add("changeColor");
+    button.innerHTML = `Fechar Pedido`;*/
+
 }
-
-/* if (nameOfFood !== undefined && nameOfDrink !== undefined && nameOfDessert !== undefined) {
-     console.log("oi")
-     let greenButton = document.querySelector(".border");
-     greenButton.classList.remove("changeColor");
-
- }
- 
- let button = document.querySelector(".border");
- button.classList.add("changeColor");
- button.innerHTML = `Fechar Pedido`;
- 
- 
- /* let contador = 0;
-  while (contador === 3 ) {
-      let greenButton = document.querySelector(".border");
-      greenButton.classList.add("changeColor");
-      greenButton.innerHTML = `Fechar Pedido`
-      contador++;
-      console.log(contador)
-  }*/
-
-
 
 //função fará as pergunats e mostrará o modal
 function orderFood() {
@@ -194,7 +183,7 @@ function orderConfirm() {
     mensagem = encodeURIComponent(mensagem);
 
     let watsapp = "https://wa.me/5592995049656?text=";
-    window.open(watsapp + mensagem);
+    window.open(watsapp + mensagem); //window.open tem prblemas de segurança melhor usar href
 
 }
 
