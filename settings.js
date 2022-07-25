@@ -52,7 +52,7 @@ function foodSelection(element, food, value) {
 function drinkSelection(element, drink, value) {
 
 
-    let card = document.querySelector(".drinkCards .borderGreen"); //para não desmarcar os cards do foodSelectio é necessário fazer uma descrição exata do elemento que quero manipular (esse eu peguei o conteiner que tem descendentes com a borda)
+    let card = document.querySelector(".drinkCards .borderGreen"); //para não desmarcar os cards do foodSelection é necessário fazer uma descrição exata do elemento que quero manipular (esse eu peguei o conteiner que tem descendentes com a borda)
     let icon = document.querySelector(".drinkCards .borderGreen .icon-check");
     if (card !== null) {
         card.classList.remove('borderGreen');
@@ -114,7 +114,6 @@ function actionButton() {
 
    /* ESSE METODO TB FUNCIONA
    if (nameOfFood && nameOfDrink && nameOfDessert) {
-    
         let greenButton = document.querySelector(".border");
         greenButton.classList.remove("changeColor");
    
@@ -132,9 +131,8 @@ function orderFood() {
         clientName = prompt("Tell us your name, please!");
         clientAddress = prompt("And your address!");
 
+
         let showModal = document.querySelector(".modal-container");
-
-
 
         let mealTitle = document.querySelector(".mealTitle");
         mealTitle.innerHTML = ` ${nameOfFood}`;
@@ -199,7 +197,7 @@ function orderCancel() {
     }
     cancel.classList.add("hidden");
     
-   
+   // location.reload();
 }
 
 //função de recarregar a página quando o cancel button é acionado
@@ -209,3 +207,4 @@ function orderCancel() {
 
         location.reload();
     });
+//funciona tb somente com o metodo location.reload(); dentro da função
