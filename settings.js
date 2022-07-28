@@ -58,7 +58,7 @@ function drinkSelection(element, drink, value) {
         card.classList.remove('borderGreen');
         icon.classList.add("hidden");//nao precisa está no DOM, A Classe da borda
         itemsCount = itemsCount - 1;
-    
+
     } else {
         element.classList.add('borderGreen'); //o element é equivalente ao this
         let tag = document.querySelector(".drinkCards .borderGreen .icon-check");
@@ -110,21 +110,35 @@ function actionButton() {
         const greenButton = document.querySelector(".border"); //pra fazer funcionar fiz classes de nivel e adicionei o opacity
         greenButton.classList.add("changeColor");
         greenButton.innerHTML = `Fechar Pedido`;
+    } else {
+        if(itemsCount !== null){
+            const buttonReset = document.querySelector('.border');
+            buttonReset.classList.remove("changeColor");
+            buttonReset.innerHTML = ` Select  3 items <br />to complete the order`
+            console.log(buttonReset)
+        }
+       
     }
 
-   /* ESSE METODO TB FUNCIONA
-   if (nameOfFood && nameOfDrink && nameOfDessert) {
-        let greenButton = document.querySelector(".border");
-        greenButton.classList.remove("changeColor");
-   
-    }
+    /* ESSE METODO TB FUNCIONA
+    if (nameOfFood && nameOfDrink && nameOfDessert) {
+         let greenButton = document.querySelector(".border");
+         greenButton.classList.remove("changeColor");
     
-    let button = document.querySelector(".border");
-    button.classList.add("changeColor");
-    button.innerHTML = `Fechar Pedido`;*/
+     }
+     
+     let button = document.querySelector(".border");
+     button.classList.add("changeColor");
+     button.innerHTML = `Fechar Pedido`;*/
 
 }
 
+/*function buttonReset(cartaClicada) {
+    
+    console.log(cartaClicada)
+    cartaClicada.classList.remove('changeColor')
+
+}*/
 //função fará as pergunats e mostrará o modal
 function orderFood() {
     if (itemsCount === 3) {
@@ -196,15 +210,15 @@ function orderCancel() {
 
     }
     cancel.classList.add("hidden");
-    
-   // location.reload();
+
+    // location.reload();
 }
 
 //função de recarregar a página quando o cancel button é acionado
 //function pageReload() {
-    let btn = document.querySelector("#refresh");
-    btn.addEventListener("click", function () {
+let btn = document.querySelector("#refresh");
+btn.addEventListener("click", function () {
 
-        location.reload();
-    });
+    location.reload();
+});
 //funciona tb somente com o metodo location.reload(); dentro da função
