@@ -111,15 +111,25 @@ function actionButton() {
         greenButton.classList.add("changeColor");
         greenButton.innerHTML = `Fechar Pedido`;
     } else {
-        if(itemsCount !== null){
+       /* if(itemsCount !== null){ 
+            const buttonReset = document.querySelector('.border');
+            buttonReset.classList.remove("changeColor");
+            buttonReset.innerHTML = ` Select  3 items <br />to complete the order`
+            console.log(buttonReset)
+        }*/
+        buttonReset();
+    }
+}
+
+//adicione o reset caso o usuário desclique os cards
+    function buttonReset(){
+        if(itemsCount !== null){ //adicione o reset caso o usuário desclique os cards
             const buttonReset = document.querySelector('.border');
             buttonReset.classList.remove("changeColor");
             buttonReset.innerHTML = ` Select  3 items <br />to complete the order`
             console.log(buttonReset)
         }
-       
     }
-
     /* ESSE METODO TB FUNCIONA
     if (nameOfFood && nameOfDrink && nameOfDessert) {
          let greenButton = document.querySelector(".border");
@@ -131,7 +141,7 @@ function actionButton() {
      button.classList.add("changeColor");
      button.innerHTML = `Fechar Pedido`;*/
 
-}
+
 
 /*function buttonReset(cartaClicada) {
     
